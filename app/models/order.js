@@ -1,24 +1,33 @@
 const mongoose = require('mongoose')
 
-const exampleSchema = new mongoose.Schema(
+const orderSchema = new mongoose.Schema(
 	{
-		title: {
+		name: {
 			type: String,
 			required: true,
 		},
-		text: {
+		date: {
 			type: String,
 			required: true,
+		},
+		designFront: {
+			type: String,
+		},
+		designBack: {
+			type: String,
+		},
+		pictures: {
+			type: String,
 		},
 		owner: {
 			type: mongoose.Schema.Types.ObjectId,
 			ref: 'User',
 			required: true,
-		},
+		}
 	},
 	{
 		timestamps: true,
 	}
 )
 
-module.exports = mongoose.model('Example', exampleSchema)
+module.exports = mongoose.model('Order', orderSchema)
