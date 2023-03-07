@@ -62,5 +62,4 @@ As a user, I want to be able to:
 
 ## ERD
 
-![ERD](https://user-images.githubusercontent.com/23158353/223519891-3711d42e-a27e-4894-8623-8949d82288fc.PNG)
-
+![ERD](https://user-images.githubusercontent.com/23158353/223525554-568703a3-892e-4a1c-abf9-39836533b0e8.PNG)
