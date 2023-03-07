@@ -9,6 +9,7 @@ As a user, I want to be able to:
 - Scale the picture, rotate, and placement
 - Choose the type of apprarel they want to put the picture on, and the color.
 - See their order history
+- Add orders to cart and checkout
 
 ## Routes
 
@@ -50,5 +51,5 @@ As a user, I want to be able to:
 
 ## ERD
 
-![ERD](https://user-images.githubusercontent.com/23158353/223465211-68332e83-1fd7-4884-9cda-d62448a49ef1.PNG)
+![ERD](https://user-images.githubusercontent.com/23158353/223519891-3711d42e-a27e-4894-8623-8949d82288fc.PNG)
 
