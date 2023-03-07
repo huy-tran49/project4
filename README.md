@@ -25,10 +25,17 @@ As a user, I want to be able to:
 
 | Verb   | URI Pattern                   | Controller#Action |
 |--------|-------------------------------|-------------------|
-| GET    | /order/history                | order#create    |
+| GET    | /order/history                | order#show      |
 | POST   | /order/create                 | order#create    |
 | PATCH  | /order/:orderid/:update       | order#update    |
 | DELETE | /order/:orderid/:delete       | order#delete    |
+
+### Image
+
+| Verb   | URI Pattern                   | Controller#Action |
+|--------|-------------------------------|-------------------|
+| GET    | /image                        | image#show      |
+| POST   | /image/create                 | image#create    |
 
 ## Wireframe
 
