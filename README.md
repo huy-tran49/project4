@@ -13,7 +13,7 @@ As a user, I want to be able to:
 
 ## Routes
 
-### Users
+### Users - Customer
 
 | Verb   | URI Pattern            | Controller#Action |
 |--------|------------------------|-------------------|
@@ -21,6 +21,14 @@ As a user, I want to be able to:
 | POST   | /sign-in               | users#signin      |
 | PATCH  | /change-password/      | users#changepw    |
 | DELETE | /sign-out/             | users#signout     |
+
+### Users - Admin
+
+| Verb   | URI Pattern                   | Controller#Action |
+|--------|-------------------------------|-------------------|
+| GET    | /admin/order                  | admin#show        |
+| PATCH  | /admin/order/:orderid/update  | admin#update      |
+| DELETE | /admin/order/:orderid/delete  | admin#delete      |
 
 ### Order
 
