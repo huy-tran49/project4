@@ -29,3 +29,7 @@ As a user, I want to be able to:
 | POST   | /order/create                 | order#create    |
 | PATCH  | /order/:orderid/:update       | order#update    |
 | DELETE | /order/:orderid/:delete       | order#delete    |
+
+![home](https://user-images.githubusercontent.com/23158353/223463814-68b91a97-0b66-443f-acae-becc23302cde.PNG)
+![create](https://user-images.githubusercontent.com/23158353/223463845-b5b9afae-a6c7-403e-9d0d-15994a00758d.PNG)
+![order](https://user-images.githubusercontent.com/23158353/223463866-92be80a0-b5ca-4bfd-82c5-8a72f3ad380a.PNG)
