@@ -37,3 +37,6 @@ As a user, I want to be able to:
 ![order](https://user-images.githubusercontent.com/23158353/223463866-92be80a0-b5ca-4bfd-82c5-8a72f3ad380a.PNG)
 
 ## ERD
+
+![ERD](https://user-images.githubusercontent.com/23158353/223465211-68332e83-1fd7-4884-9cda-d62448a49ef1.PNG)
+
