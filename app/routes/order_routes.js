@@ -29,7 +29,7 @@ const router = express.Router()
 
 // INDEX
 // GET /examples
-router.get('/order', requireToken, (req, res, next) => {
+router.get('/order/history', requireToken, (req, res, next) => {
 	Order.find()
 		.then((orders) => {
 			// `examples` will be an array of Mongoose documents
@@ -81,13 +81,13 @@ router.patch('/order/:id', requireToken, removeBlanks, (req, res, next) => {
 
 	Order.findById(req.params.id)
 		.then(handle404)
-		.then((example) => {
+		.then((order) => {
 			// pass the `req` object and the Mongoose record to `requireOwnership`
 			// it will throw an error if the current user isn't the owner
-			requireOwnership(req, example)
+			requireOwnership(req, order)
 
 			// pass the result of Mongoose's `.update` to the next `.then`
-			return example.updateOne(req.body.example)
+			return order.updateOne(req.body.order)
 		})
 		// if that succeeded, return 204 and no JSON
 		.then(() => res.sendStatus(204))
@@ -100,11 +100,11 @@ router.patch('/order/:id', requireToken, removeBlanks, (req, res, next) => {
 router.delete('/order/:id', requireToken, (req, res, next) => {
 	Order.findById(req.params.id)
 		.then(handle404)
-		.then((example) => {
+		.then((order) => {
 			// throw an error if current user doesn't own `example`
-			requireOwnership(req, example)
+			requireOwnership(req, order)
 			// delete the example ONLY IF the above didn't throw
-			example.deleteOne()
+			order.deleteOne()
 		})
 		// send back 204 and no content if the deletion succeeded
 		.then(() => res.sendStatus(204))
