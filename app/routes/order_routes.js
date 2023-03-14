@@ -57,7 +57,7 @@ router.get('/order/:id', requireToken, (req, res, next) => {
 
 // CREATE
 // POST /examples
-router.post('/order/create', requireToken, (req, res, next) => {
+router.post('/order', requireToken, (req, res, next) => {
 	// set owner of new example to be current user
 	req.body.order.owner = req.user.id
 

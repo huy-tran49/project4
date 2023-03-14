@@ -6,6 +6,7 @@ const cors = require('cors')
 // require route files
 const orderRoutes = require('./app/routes/order_routes')
 const userRoutes = require('./app/routes/user_routes')
+const cloudinaryRoutes = require('./app/routes/cloudinary_routes')
 
 // require middleware
 const errorHandler = require('./lib/error_handler')
@@ -57,9 +58,10 @@ app.use(auth)
 // add `express.json` middleware which will parse JSON requests into
 // JS objects before they reach the route files.
 // The method `.use` sets up middleware for the Express application
-app.use(express.json())
+app.use(express.json({limit: '50mb', extended: true}))
 // this parses requests sent by `$.ajax`, which use a different content type
-app.use(express.urlencoded({ extended: true }))
+app.use(express.urlencoded({limit: "50mb", extended: true, parameterLimit:50000}))
+app.use(express.text({ limit: '200mb' }))
 
 // log each request as it comes in for debugging
 app.use(requestLogger)
@@ -67,6 +69,9 @@ app.use(requestLogger)
 // register route files
 app.use(orderRoutes)
 app.use(userRoutes)
+
+// Cloudinary
+app.use(cloudinaryRoutes)
 
 // register error handling middleware
 // note that this comes after the route middlewares, because it needs to be
