@@ -3,7 +3,7 @@ const express = require('express')
 // Passport docs: http://www.passportjs.org/docs/
 const passport = require('passport')
 
-// pull in Mongoose model for examples
+// pull in Mongoose model for order
 const Order = require('../models/order')
 
 // this is a collection of methods that help us detect situations when we need
@@ -45,7 +45,7 @@ router.get('/order', requireToken, (req, res, next) => {
 
 // SHOW
 // GET /examples/5a7db6c74d55bc51bdf39793
-router.get('/order/:id', requireToken, (req, res, next) => {
+router.get('/order/:id', (req, res, next) => {
 	// req.params.id will be set based on the `:id` in the route
 	Order.findById(req.params.id)
 		.then(handle404)

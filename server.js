@@ -7,6 +7,7 @@ const cors = require('cors')
 const orderRoutes = require('./app/routes/order_routes')
 const userRoutes = require('./app/routes/user_routes')
 const cloudinaryRoutes = require('./app/routes/cloudinary_routes')
+const imageRoutes = require('./app/routes/image_routes')
 
 // require middleware
 const errorHandler = require('./lib/error_handler')
@@ -69,6 +70,7 @@ app.use(requestLogger)
 // register route files
 app.use(orderRoutes)
 app.use(userRoutes)
+app.use(imageRoutes)
 
 // Cloudinary
 app.use(cloudinaryRoutes)

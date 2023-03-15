@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-const imageSchema = require('./image')
+
 
 const orderSchema = new mongoose.Schema(
 	{
@@ -21,7 +21,6 @@ const orderSchema = new mongoose.Schema(
 		designBack: {
 			type: String,
 		},
-		pictures: [imageSchema],
 		owner: {
 			type: mongoose.Schema.Types.ObjectId,
 			ref: 'User',
